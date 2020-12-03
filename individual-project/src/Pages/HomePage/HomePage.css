@@ -1,0 +1,22 @@
+.homePageMainContainer {
+    height: 80vh;
+    display: flex;
+}
+
+.homePageLeftContainer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homePageRightContainer {
+    width: 50%;
+}
+
+.profileImage {
+    width: 60%;
+    border-radius: 50%;
+    box-shadow: 0px 15px 15px 5px #000000;
+}
+
