@@ -4,8 +4,13 @@
 }
 
 .galleryImage {
-    width: 30%;
+    width: 27%;
     margin:5px;
+}
+
+.galleryImage:hover {
+    cursor: pointer;
+    box-shadow: -3px 3px 15px 5px #000000;
 }
 
 .displayedImageBackground {
@@ -15,7 +20,7 @@
     top: 0;
     left: 0;
     background-color: black;
-    opacity: 0.9;
+    opacity: 0.75;
 }
 
 .displayedImageContainer {
@@ -31,4 +36,5 @@
 
 .displayedImage {
     width: 60%;
+    box-shadow: 0px 0px 15px 20px #000000;
 }

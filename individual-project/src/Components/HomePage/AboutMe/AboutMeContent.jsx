@@ -1,7 +1,7 @@
 import React from "react";
-import galleryImages from "./Gallery";
-import galleryImagesTags from "./Gallery";
-import { Gallery } from "./Gallery";
+import galleryImages from "../Gallery/Gallery";
+import galleryImagesTags from "../Gallery/Gallery";
+import { Gallery } from "../Gallery/Gallery";
 
 export class AboutMeContent extends React.Component {
     render() {
