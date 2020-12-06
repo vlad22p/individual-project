@@ -4,6 +4,20 @@ import "./Header.css";
 
 
 export class Header extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            dropdownClassName: "dropdownOff"
+        }
+    }
+
+    displayDropdown = () => {
+        this.setState({ dropdownClassName: "dropdownOn"})
+    }
+    hideDropdown = () => {
+        this.setState({ dropdownClassName: "dropdownOff"});
+    }
+
     render() {
         return (
             <div className="headerMainContainer">
@@ -14,12 +28,15 @@ export class Header extends React.Component {
                             <button className="headerButton">Homepage</button>
                         </Link>
                     </div>
-                    <div className="headerButtonsContainer">
+                    <button className="moreDropdownButton" onClick={this.displayDropdown}>More</button>
+                </div>
+                <div className={this.state.dropdownClassName} onClick={this.hideDropdown}>
+                    <div className="dropdownContent">
                         <Link to="/CV">
-                            <button className="headerButton">My CV</button>
+                            <button className="dropdownButton">My CV</button>
                         </Link>
                         <Link to="/ShowOff">
-                            <button className="headerButton">Show Off</button>
+                            <button className="dropdownButton">Show Off</button>
                         </Link>
                     </div>
                 </div>
