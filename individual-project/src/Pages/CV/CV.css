@@ -1,0 +1,93 @@
+#cvMainContainer {
+    width: 60%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 20%;
+    background-color: white;
+    box-shadow: 5px 5px 25px 15px #000000;
+}
+
+#cvMainContainer h1 {
+    color: #003487;
+}
+
+#cvMainContainer h2 {
+    color: #003487;
+}
+
+#cvMainContainer h3 {
+    color: #78acff;
+    text-shadow: -3px 3px 2px #FFFFFF;
+}
+
+#cvHeader {
+    height: 25vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: solid 5px black;
+}
+
+#cvImage {
+    width: 20vh;
+    border-radius: 50%;
+    margin-left: 10%;
+}
+
+#cvHeaderInfo {
+    margin-left: 10%;
+}
+
+#cvContent {
+    width: 100%;
+    display: flex;
+}
+
+aside {
+    width: 35%;
+    display: flex;
+    flex-flow: column;
+    font-size: larger;
+    border-right: solid 3px black;
+    background: linear-gradient(240deg, rgba(168,199,223,1) 7%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 100%);
+}
+
+.cvAsideSection {
+    display: flex;
+    flex-flow: column;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.cvAsideSection ul {
+    list-style-type: none;
+}
+
+.cvAsideSection * {
+    padding: 2%;
+}
+
+main {
+    width: 65%;
+    display: flex;
+    flex-flow: column;
+    font-size: larger;
+    background: linear-gradient(60deg, rgba(168,199,223,1) 7%, rgba(255,255,255,1) 40%, rgba(255,255,255,1) 100%);
+}
+
+.cvMainSection {
+    display: flex;
+    flex-flow: column;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.cvMainSection p {
+    text-align: justify;
+}
+
+.cvMainSection * {
+    padding: 1%;
+}

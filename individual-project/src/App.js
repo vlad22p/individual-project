@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import { HomePage } from "./Pages/HomePage/HomePage";
 import { CV } from "./Pages/CV/CV";
-import { ShowOffPage } from "./Pages/ShowOffPage/ShowOffPage";
+import { Arcade } from "./Pages/Arcade/Arcade";
 import { Header } from "./Components/Header/Header";
 import { Footer } from "./Components/Footer/Footer";
 
@@ -21,8 +21,8 @@ class App extends React.Component {
             <Route path="/CV">
               <CV />
             </Route>
-            <Route path="/ShowOff">
-              <ShowOffPage />
+            <Route path="/Arcade">
+              <Arcade />
             </Route>
             <Route path="/">
               <HomePage />

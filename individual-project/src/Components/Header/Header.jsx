@@ -35,8 +35,8 @@ export class Header extends React.Component {
                         <Link to="/CV">
                             <button className="dropdownButton">My CV</button>
                         </Link>
-                        <Link to="/ShowOff">
-                            <button className="dropdownButton">Show Off</button>
+                        <Link to="/Arcade">
+                            <button className="dropdownButton">Arcade</button>
                         </Link>
                     </div>
                 </div>

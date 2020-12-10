@@ -1,7 +1,7 @@
 import React from "react";
 import "./HomePage.css";
 import { AboutMe } from "../../Components/HomePage/AboutMe/AboutMe";
-import profile from "./profile.jpg";
+import profile from "../../Images/profile.jpg";
 
 export class HomePage extends React.Component {
     render() {
