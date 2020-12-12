@@ -27,9 +27,9 @@ const CvAside = () => {
         <aside>
             <div className="cvAsideSection">
                 <h2>Contact</h2>
-                <span>Email</span>
+                <span className="headerSpan">Email</span>
                 <span>vlad.pop0797@gmail.com</span>
-                <span>Phone number</span>
+                <span className="headerSpan">Phone number</span>
                 <span>0761361797</span>
             </div>
             <div className="cvAsideSection">

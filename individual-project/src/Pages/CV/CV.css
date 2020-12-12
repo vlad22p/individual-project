@@ -68,6 +68,11 @@ aside {
     padding: 2%;
 }
 
+.headerSpan {
+    font-weight: bold;
+    color: #78acff;
+}
+
 main {
     width: 65%;
     display: flex;
