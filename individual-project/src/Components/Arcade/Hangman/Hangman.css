@@ -1,0 +1,25 @@
+.gameContainer {
+    width: 35%;
+    height: 80%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.gameContainer * {
+    padding: 1vh;
+}
+
+.hangmanImage {
+    width: 60%;
+}
+
+.hangmanKeyboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}

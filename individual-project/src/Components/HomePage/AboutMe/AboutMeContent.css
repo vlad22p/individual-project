@@ -1,0 +1,15 @@
+.descriptionDiv {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    font-size: larger;
+    text-align: justify;
+}
+
+.descriptionDiv p {
+    padding: 2%;
+}
