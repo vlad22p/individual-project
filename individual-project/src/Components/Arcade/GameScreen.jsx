@@ -1,5 +1,6 @@
 import React from "react";
 import { Hangman } from "./Hangman/Hangman";
+import { RockPaperScissors } from "./RockPaperScissors/RockPaperScissors";
 import "./GameScreen.css";
 
 export class GameScreen extends React.Component {
@@ -17,7 +18,7 @@ export class GameScreen extends React.Component {
         } else if (this.props.selectedGame === "rockPaperScissors") {
             return (
                 <div className="gameScreenContainer">
-                    <p>You are playing Rock Paper Scisors</p>
+                    <RockPaperScissors></RockPaperScissors>
                 </div>
             )
         }
