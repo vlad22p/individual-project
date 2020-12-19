@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
+import homebutton from "../../Images/homebutton.png";
 
 
 export class Header extends React.Component {
@@ -25,7 +26,7 @@ export class Header extends React.Component {
                 <div className="headerContent">
                     <div className="headerLogo">
                         <Link to="/">
-                            <button className="headerButton">Homepage</button>
+                            <img className="home-button" src={homebutton}></img>
                         </Link>
                     </div>
                     <button className="moreDropdownButton" onClick={this.displayDropdown}>More</button>
