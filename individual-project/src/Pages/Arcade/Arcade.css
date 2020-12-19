@@ -11,8 +11,10 @@
     height: 80%;
     display: flex;
     flex-flow: column;
-    background-color: white;
+    color: #78acff;
+    background-color: #003487;
     border-right: solid 1px black;
+    box-shadow: -5px 0px 15px 5px #000000;
 }
 
 .selectGame {
@@ -25,6 +27,14 @@
 }
 
 .selectGame:hover {
-    background-color: lightgray;
+    color: #003487;
+    background-color: #78acff;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 1400px) {
+    #gameSelector {
+        width: 30%;
+        height: 100%;
+    }   
 }

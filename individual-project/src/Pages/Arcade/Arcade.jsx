@@ -1,6 +1,6 @@
 import React from "react";
 import "./Arcade.css";
-import { GameScreen } from "../../Components/Arcade/GameScreen";
+import { GameScreen } from "./components/GameScreen";
 
 export class Arcade extends React.Component {
     constructor() {

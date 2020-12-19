@@ -21,3 +21,15 @@
     display: flex;
     align-items: center;
 }
+
+@media only screen and (max-width: 1400px) {
+    .aboutMeContent {
+        height: unset;
+    }
+
+    .homePageButtonsContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

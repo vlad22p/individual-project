@@ -1,11 +1,11 @@
 import React from "react";
-import hangman1 from "../../../Images/Arcade/Hangman/hangman1.png";
-import hangman2 from "../../../Images/Arcade/Hangman/hangman2.png";
-import hangman3 from "../../../Images/Arcade/Hangman/hangman3.png";
-import hangman4 from "../../../Images/Arcade/Hangman/hangman4.png";
-import hangman5 from "../../../Images/Arcade/Hangman/hangman5.png";
-import hangman6 from "../../../Images/Arcade/Hangman/hangman6.png";
-import hangman7 from "../../../Images/Arcade/Hangman/hangman7.png";
+import hangman1 from "../../../../Images/Arcade/Hangman/hangman1.png";
+import hangman2 from "../../../../Images/Arcade/Hangman/hangman2.png";
+import hangman3 from "../../../../Images/Arcade/Hangman/hangman3.png";
+import hangman4 from "../../../../Images/Arcade/Hangman/hangman4.png";
+import hangman5 from "../../../../Images/Arcade/Hangman/hangman5.png";
+import hangman6 from "../../../../Images/Arcade/Hangman/hangman6.png";
+import hangman7 from "../../../../Images/Arcade/Hangman/hangman7.png";
 import "./Hangman.css";
 
 export const hangmanImages = [hangman1, hangman2, hangman3, hangman4, hangman5, hangman6, hangman7]
@@ -34,17 +34,23 @@ export class Hangman extends React.Component {
         return this.state.gameWord.split("").map(letter => (this.state.guessedLetters.includes(letter) ? letter : " _ "));
     }
 
-    checkLetter = (event) => {
+    letterGuessed = (event) => {
+        this.state.guessedLetters.push(event.target.value);
+        this.setState({ guessedLetters: this.state.guessedLetters });
+    }
+
+    letterMistake = () => {
+        this.setState({
+            mistakesMade: this.state.mistakesMade + 1,
+            imageIndex: this.state.imageIndex + 1
+        });
+    }
+
+    playGame = (event) => {
         if (!this.state.guessedLetters.includes(event.target.value) && this.state.gameWord.includes(event.target.value)) {
-            this.state.guessedLetters.push(event.target.value);
-            this.setState({ guessedLetters: this.state.guessedLetters });
-            console.log(this.state.guessedLetters);
+            this.letterGuessed(event);
         } else if (!this.state.gameWord.includes(event.target.value)) {
-            console.log("wrong");
-            this.setState({
-                mistakesMade: this.state.mistakesMade + 1,
-                imageIndex: this.state.imageIndex + 1
-            })
+            this.letterMistake();
         }
     }
 
@@ -58,7 +64,7 @@ export class Hangman extends React.Component {
     render() {
         const keyboard = "abcdefghijklmnopqrstuvwxyz".split("").map(character =>
             <button
-                onClick={(e) => { this.checkLetter(e); this.isGameLost(e); }}
+                onClick={(e) => { this.playGame(e); this.isGameLost(e); }}
                 key={character}
                 value={character}
             >{character}

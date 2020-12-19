@@ -23,3 +23,33 @@
     box-shadow: 0px 15px 15px 5px #000000;
 }
 
+@media only screen and (max-width: 1400px) {
+    .homePageMainContainer {
+        display: flex;
+        flex-flow: column;
+    }
+
+    .homePageLeftContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .homePageRightContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .descriptionDiv {
+        height: unset;
+    }
+  }
+
+  @media only screen and (max-height: 600px) {
+      .homePageMainContainer {
+          height: unset;
+      }
+  }

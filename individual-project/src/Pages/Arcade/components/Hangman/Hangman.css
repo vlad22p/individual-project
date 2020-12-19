@@ -7,6 +7,7 @@
     align-items: center;
     background-color: white;
     box-sizing: border-box;
+    box-shadow: 5px 0px 15px 5px #000000;
 }
 
 .gameContainer * {
@@ -22,4 +23,11 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 1400px) {
+    .gameContainer {
+        width: 70%;
+        height: 100%;
+    }   
 }

@@ -1,9 +1,9 @@
 import React from "react";
 import "./RockPaperScissors.css";
-import logo from "../../../Images/Arcade/rock-paper-scissors/logo.png";
-import rockImage from "../../../Images/Arcade/rock-paper-scissors/rock.png";
-import paperImage from "../../../Images/Arcade/rock-paper-scissors/paper.png";
-import scissorsImage from "../../../Images/Arcade/rock-paper-scissors/scissors.png";
+import logo from "../../../../Images/Arcade/rock-paper-scissors/logo.png";
+import rockImage from "../../../../Images/Arcade/rock-paper-scissors/rock.png";
+import paperImage from "../../../../Images/Arcade/rock-paper-scissors/paper.png";
+import scissorsImage from "../../../../Images/Arcade/rock-paper-scissors/scissors.png";
 
 export const availableChoices = ["rock", "paper", "scissors"];
 
@@ -43,6 +43,10 @@ export class RockPaperScissors extends React.Component {
             playerChoice: "scissors",
             playerSrc: scissorsImage
         });
+    }
+
+    gameDidStart = () => {
+        this.setState({ didGameStart: true });
     }
 
     displayComputerChoice = () => {
@@ -93,6 +97,7 @@ export class RockPaperScissors extends React.Component {
     }
 
     startGame = () => {
+        this.gameDidStart();
         this.displayComputerChoice();
         this.isDraw();
         this.victoryOrDefeat();
@@ -110,44 +115,64 @@ export class RockPaperScissors extends React.Component {
     }
 
     render() {
-        return (
-            <div className="RPS-main-container">
-                <Battleground
+        if (!this.state.didGameStart) {
+            return (
+                <PlayerChoice
+                    chooseRock={this.chooseRock}
+                    choosePaper={this.choosePaper}
+                    chooseScissors={this.chooseScissors}
+                    playerSrc={this.state.playerSrc}
+                    startGame={this.startGame}
+                ></PlayerChoice>
+            )
+        } else {
+            return (
+                <PlayerVsComputer
                     playerSrc={this.state.playerSrc}
                     computerSrc={this.state.computerSrc}
-                    didGameStart={this.state.didGameStart}
                     gameResult={this.state.gameResult}
                     playAgain={this.playAgain}
-                ></Battleground>
-                <div className="RPS-choice-container">
-                    <img src={rockImage} className="player-choice" choice="rock" onClick={this.chooseRock}></img>
-                    <img src={paperImage} className="player-choice" choice="paper" onClick={this.choosePaper}></img>
-                    <img src={scissorsImage} className="player-choice" choice="scissors" onClick={this.chooseScissors}></img>
+                ></PlayerVsComputer>
+            )
+        }
+    }
+}
+
+export class PlayerChoice extends React.Component {
+    render() {
+        return (
+            <div className="game-beginning">
+                <div className="displayed-player-choice">
+                    <h1>Make your choice!</h1>
+                    <img src={this.props.playerSrc}></img>
                 </div>
-                <button onClick={this.startGame}>Start!</button>
+                <div className="RPS-choice-container">
+                    <img src={rockImage} className="player-choice" choice="rock" onClick={this.props.chooseRock}></img>
+                    <img src={paperImage} className="player-choice" choice="paper" onClick={this.props.choosePaper}></img>
+                    <img src={scissorsImage} className="player-choice" choice="scissors" onClick={this.props.chooseScissors}></img>
+                </div>
+                <button className="game-button" onClick={this.props.startGame}>Start!</button>
             </div>
         )
     }
 }
 
-export class Battleground extends React.Component {
+export class PlayerVsComputer extends React.Component {
     render() {
         return (
-            <div className="battleground-container">
-                <div className="battleground-up">
-                    <div className="player-choice-container">
+            <div className="game-result">
+                <div className="both-choices">
+                    <div className="choice-container">
                         <h2>You chose</h2>
-                        <img src={this.props.playerSrc} className="choice-display"></img>
+                        <img src={this.props.playerSrc}></img>
                     </div>
-                    <div className="computer-choice-container">
-                        <h2>Computer chose</h2>
-                        <img src={this.props.computerSrc} className="choice-display"></img>
+                    <div className="choice-container">
+                        <h2>The computer chose</h2>
+                        <img src={this.props.computerSrc}></img>
                     </div>
                 </div>
-                <div className="battleground-down">
-                    <h1>{this.props.gameResult}</h1>
-                    <button onClick={this.props.playAgain}>Play again!</button>
-                </div>
+                <h1>{this.props.gameResult}</h1>
+                <button className="game-button" onClick={this.props.playAgain}>Play Again!</button>
             </div>
         )
     }

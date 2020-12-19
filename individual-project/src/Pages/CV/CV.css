@@ -96,3 +96,15 @@ main {
 .cvMainSection * {
     padding: 1%;
 }
+
+.course-container {
+    display: flex;
+    flex-flow: column;
+}
+
+@media only screen and (max-width: 1400px) {
+    #cvMainContainer {
+        width: 100%;
+        margin: 0;
+    }
+  }

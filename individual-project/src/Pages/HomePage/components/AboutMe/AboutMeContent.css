@@ -5,11 +5,20 @@
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: white;
+    color: #78acff;
+    background-color: #003487;
     font-size: larger;
     text-align: justify;
+    box-shadow: -5px 5px 15px 5px #000000;
 }
 
 .descriptionDiv p {
     padding: 2%;
+}
+
+@media only screen and (max-width: 1400px) {
+    .descriptionDiv {
+        width: 100%;
+        height: unset;
+    }
 }
