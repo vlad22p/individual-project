@@ -1,4 +1,4 @@
-.descriptionDiv {
+.descriptive-div {
     width: 90%;
     height: 100%;
     display: flex;
@@ -12,13 +12,31 @@
     box-shadow: -5px 5px 15px 5px #000000;
 }
 
-.descriptionDiv p {
+.descriptive-div p {
     padding: 2%;
 }
 
+.text-container {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.text-container h3 {
+    color: black;
+}
+
 @media only screen and (max-width: 1400px) {
-    .descriptionDiv {
+    .descriptive-div {
         width: 100%;
         height: unset;
+    }
+
+    .text-container * {
+        margin-top: 2vh;
+        margin-bottom: 2vh;
     }
 }

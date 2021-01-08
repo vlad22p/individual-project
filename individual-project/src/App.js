@@ -8,6 +8,7 @@ import {
 import { HomePage } from "./Pages/HomePage/HomePage";
 import { CV } from "./Pages/CV/CV";
 import { Arcade } from "./Pages/Arcade/Arcade";
+import { MyHomework } from "./Pages/MyHomework/MyHomework";
 import { Header } from "./Components/Header/Header";
 import { Footer } from "./Components/Footer/Footer";
 
@@ -23,6 +24,9 @@ class App extends React.Component {
             </Route>
             <Route path="/Arcade">
               <Arcade />
+            </Route>
+            <Route path="/MyHomework">
+              <MyHomework />
             </Route>
             <Route path="/">
               <HomePage />

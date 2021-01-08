@@ -1,8 +1,8 @@
-.headerMainContainer {
+.header-main-container {
     box-shadow: 0px 15px 15px 5px #000000;
 }
 
-.headerBackground {
+.header-background {
     width: 100%;
     height: 10vh;
     background-color: black;
@@ -11,7 +11,7 @@
     z-index: -1;
 }
 
-.headerContent {
+.header-content {
     width: 100%;
     height: 10vh;
     display: flex;
@@ -20,11 +20,11 @@
     box-shadow: 0px 15px 15px 5px #000000;
 }
 
-.dropdownOff {
+.dropdown-off {
     display: none;
 }
 
-.dropdownOn {
+.dropdown-on {
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -32,23 +32,29 @@
     left: 0;
 }
 
-.moreDropdownButton {
-    width: 6%;
-    height: 90%;
-    margin-right: 5%;
-    border-radius: 50%;
+.more-dropdown-button {
+    height: 100%;
+    width: 7%;
+    background-color:#003487;
     color: #78acff;
-    background-color: #003487;
-    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
+    font-size:xx-large;
 }
 
-.moreDropdownButton:hover {
+.more-dropdown-button:hover {
     cursor: pointer;
     background-color:  #78acff;
     color: #003487;
 }
 
-.dropdownContent {
+.morebutton {
+    width: 60%;
+}
+
+.dropdown-content {
     width: 15%;
     display: flex;
     flex-flow: column;
@@ -58,7 +64,7 @@
     box-shadow: 0px 15px 15px 5px #000000;
 }
 
-.dropdownButton {
+.dropdown-button {
     width: 100%;
     height: 5vh;
     background-color:  #78acff;
@@ -66,7 +72,7 @@
     outline: none;
 }
 
-.dropdownButton:hover {
+.dropdown-button:hover {
     cursor: pointer;
     color:  #78acff;
     background-color: #003487;
@@ -77,3 +83,38 @@
     margin-left: 3%;
     border-radius: 50%;
 }
+
+@media only screen and (max-width: 1100px) {
+    .more-dropdown-button {
+        width: 15%;
+    }
+
+    .home-button {
+        height: 9vh;
+        width: 15%
+    }
+
+    .dropdown-content {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        position: absolute;
+        left: 0;
+        top: 10vh;
+        box-shadow: 0px 15px 15px 5px #000000;
+    }
+
+    .dropdown-button {
+        height: 7vh;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .more-dropdown-button {
+        width: 20%;
+    }
+    
+    .home-button {
+        width: 20%;
+    }
+  }

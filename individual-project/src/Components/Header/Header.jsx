@@ -1,43 +1,50 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
-import homebutton from "../../Images/homebutton.png";
+import homebutton from "../../Images/icons/homebutton.png";
+import morebutton from "../../Images/icons/morebutton.png";
+
 
 
 export class Header extends React.Component {
     constructor() {
         super();
         this.state = {
-            dropdownClassName: "dropdownOff"
+            dropdownClassName: "dropdown-off"
         }
     }
 
     displayDropdown = () => {
-        this.setState({ dropdownClassName: "dropdownOn"})
+        this.setState({ dropdownClassName: "dropdown-on"})
     }
     hideDropdown = () => {
-        this.setState({ dropdownClassName: "dropdownOff"});
+        this.setState({ dropdownClassName: "dropdown-off"});
     }
 
     render() {
         return (
-            <div className="headerMainContainer">
-                <div className="headerBackground"></div>
-                <div className="headerContent">
-                    <div className="headerLogo">
+            <div className="header-main-container">
+                <div className="header-background"></div>
+                <div className="header-content">
+                    <div className="header-logo">
                         <Link to="/">
                             <img className="home-button" src={homebutton}></img>
                         </Link>
                     </div>
-                    <button className="moreDropdownButton" onClick={this.displayDropdown}>More</button>
+                    <div className="more-dropdown-button" onClick={this.displayDropdown}>
+                        <img className="morebutton" src={morebutton}></img>
+                    </div>
                 </div>
                 <div className={this.state.dropdownClassName} onClick={this.hideDropdown}>
-                    <div className="dropdownContent">
+                    <div className="dropdown-content">
                         <Link to="/CV">
-                            <button className="dropdownButton">My CV</button>
+                            <button className="dropdown-button">My CV</button>
                         </Link>
                         <Link to="/Arcade">
-                            <button className="dropdownButton">Arcade</button>
+                            <button className="dropdown-button">Arcade</button>
+                        </Link>
+                        <Link to="/MyHomework">
+                            <button className="dropdown-button">My Homework</button>
                         </Link>
                     </div>
                 </div>

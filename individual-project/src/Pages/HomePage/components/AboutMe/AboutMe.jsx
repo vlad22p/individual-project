@@ -12,13 +12,13 @@ export class AboutMe extends React.Component {
 
     render() {
         return (
-            <div className="aboutMeMainContainer">
-                <div className="homePageButtonsContainer">
-                    <button className="homePageButton" onClick={() => { this.setState({ displayedContent: "aboutMe" }) }}>About Me</button>
-                    <button className="homePageButton" onClick={() => { this.setState({ displayedContent: "myHobbies" }) }}>My Hobbies</button>
-                    <button className="homePageButton" onClick={() => { this.setState({ displayedContent: "photos" }) }}>My Photos</button>
+            <div className="about-me-main-container">
+                <div className="homepage-buttons-container">
+                    <button className="homepage-button" onClick={() => { this.setState({ displayedContent: "aboutMe" }) }}>About Me</button>
+                    <button className="homepage-button" onClick={() => { this.setState({ displayedContent: "myHobbies" }) }}>My Hobbies</button>
+                    <button className="homepage-button" onClick={() => { this.setState({ displayedContent: "photos" }) }}>My Photos</button>
                 </div>
-                <div className="aboutMeContent">
+                <div className="about-me-content">
                     <AboutMeContent displayedContent={this.state.displayedContent}></AboutMeContent>
                 </div>
             </div>

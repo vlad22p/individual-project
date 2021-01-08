@@ -1,21 +1,29 @@
-.aboutMeMainContainer {
+.about-me-main-container {
     width: 100%;
 }
 
-.homePageButtonsContainer {
+.homepage-buttons-container {
     width: 100%;
     height: 5vh;
     display: flex;
     align-items: center;
 }
 
-.homePageButton {
+.homepage-button {
     width: 27%;
     height: 80%;
     margin: 5px;
+    background-color: black;
+    color: #003487;
+    font-size: x-large;
+    outline: none;
 }
 
-.aboutMeContent {
+.homepage-button:hover {
+    color: #78acff;
+}
+
+.about-me-content {
     width: 100%;
     height: 75vh;
     display: flex;
@@ -23,13 +31,19 @@
 }
 
 @media only screen and (max-width: 1400px) {
-    .aboutMeContent {
+    .about-me-content {
         height: unset;
     }
 
-    .homePageButtonsContainer{
+    .homepage-buttons-container {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .homepage-button {
+        font-size: medium;
     }
 }
