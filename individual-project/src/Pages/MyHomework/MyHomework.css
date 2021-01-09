@@ -1,0 +1,71 @@
+.homework-main-container {
+    height: 85vh;
+    width: 70%;
+    margin-left: 15%;
+    display: flex;
+}
+
+.homework-selector {
+    width: 35%;
+    height: 85%;
+    background-color: white;
+    margin-top: 5%;
+    box-shadow: -5px 5px 15px 5px #000000;
+}
+
+.homework-selector div {
+    border-bottom: solid 2px black;
+    padding: 2%;
+    text-align: center;
+}
+
+.homework-selector div:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    padding: 3.5%;
+}
+
+
+.homework-display {
+    width: 65%;
+    height: 85%;
+    margin-top: 5%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: #78acff;
+    box-shadow: 17px -15px 15px -1px #000000;
+}
+
+.homework-display a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.homework-display img {
+    width: 55%;
+}
+
+.github-link-container {
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-left: 25%;
+}
+
+.github-link-container:hover {
+    cursor: pointer;
+    border: solid 3px black;
+    box-shadow: -7px 11px 15px -1px #000000;
+}
+
+.github-link-container img {
+    width: 15%;
+    text-decoration: none;
+}
