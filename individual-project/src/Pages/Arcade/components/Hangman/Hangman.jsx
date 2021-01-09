@@ -64,6 +64,7 @@ export class Hangman extends React.Component {
     render() {
         const keyboard = "abcdefghijklmnopqrstuvwxyz".split("").map(character =>
             <button
+                className="keyboard-button"
                 onClick={(e) => { this.playGame(e); this.isGameLost(e); }}
                 key={character}
                 value={character}
@@ -73,28 +74,34 @@ export class Hangman extends React.Component {
         if (this.state.gameOver === null) {
             return (
                 <div className="gameContainer">
-                    <img className="hangmanImage" src={hangmanImages[this.state.imageIndex]}></img>
-                    <p>Guess the web-development related word</p>
-                    <p>{this.renderWord()}</p>
-                    <p>You have made {this.state.mistakesMade}/{this.state.maximumMistakes} mistakes.</p>
-                    <div className="hangmanKeyboard">{keyboard}</div>
+                    <div className="hangman-container">
+                        <img className="hangmanImage" src={hangmanImages[this.state.imageIndex]}></img>
+                        <p>Guess the web-development related word</p>
+                        <p className="green-hilight">{this.renderWord()}</p>
+                        <p>You have made
+                        <span className="red-hilight">{this.state.mistakesMade}/{this.state.maximumMistakes}</span>
+                         mistakes.</p>
+                        <div className="hangmanKeyboard">{keyboard}</div>
+                    </div>
                 </div>
             )
         } else if (this.state.gameOver === "lost") {
             return (
                 <div className="gameContainer">
-                    <img src={hangman7}></img>
-                    <p>You have lost the game.</p>
-                    <p>The word was {this.state.gameWord}</p>
-                    <button onClick={() => this.setState({
-                        gameOver: null,
-                        maximumMistakes: 6,
-                        mistakesMade: 0,
-                        imageIndex: 0,
-                        gameWord: this.getRandomWord(),
-                        wordLetters: [],
-                        guessedLetters: []
-                    })}>Play Again!</button>
+                    <div className="hangman-container">
+                        <img src={hangman7}></img>
+                        <p>You have lost the game.</p>
+                        <p>The word was <span className="red-hilight">{this.state.gameWord}</span></p>
+                        <button className="game-button" onClick={() => this.setState({
+                            gameOver: null,
+                            maximumMistakes: 6,
+                            mistakesMade: 0,
+                            imageIndex: 0,
+                            gameWord: this.getRandomWord(),
+                            wordLetters: [],
+                            guessedLetters: []
+                        })}>Play Again!</button>
+                    </div>
                 </div>
             )
         }

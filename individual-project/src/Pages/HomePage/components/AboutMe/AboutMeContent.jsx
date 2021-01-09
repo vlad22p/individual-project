@@ -11,7 +11,7 @@ export class AboutMeContent extends React.Component {
                 <div className="descriptive-div">
                     <div className="text-container">
                         <h1>Wellcome</h1>
-                        <h3>My name is Vlad Pop, I am 23 years old and I have created this project with using the skills that I have acquired during the Front-end Web Development Course.</h3>
+                        <h3>My name is Vlad Pop, I am 23 years old and I have created this project using the skills that I have acquired during the Front-end Web Development Course.</h3>
                         <h3>I have studied psychology, which I still find a very interesting scientific domain, I enjoy reading psychological books and even scientific articles.</h3>
                         <h3>However, when it comes to building a professional career, the IT world seems to be more attractive for me.</h3>
                         <h3>Feel free to explore my very first project!</h3>

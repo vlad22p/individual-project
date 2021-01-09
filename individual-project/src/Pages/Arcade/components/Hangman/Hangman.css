@@ -1,17 +1,18 @@
 .gameContainer {
     width: 35%;
     height: 80%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
     background-color: white;
     box-sizing: border-box;
     box-shadow: 5px 0px 15px 5px #000000;
 }
 
-.gameContainer * {
-    padding: 1vh;
+.hangman-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .hangmanImage {
@@ -19,10 +20,47 @@
 }
 
 .hangmanKeyboard {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.game-button {
+    padding: 3%;
+    font-size: larger;
+    background-color: #003487;
+}
+
+.game-button:hover {
+    cursor: pointer;
+    background-color: #78acff;
+}
+
+.keyboard-button {
+    background-color: black;
+    color: gray;
+    padding: 1%;
+    font-size: xx-large;
+}
+
+.keyboard-button:hover {
+    cursor: pointer;
+    outline: none;
+    color: green
+}
+
+.red-hilight {
+    font-size: larger;
+    font-weight: bolder;
+    color: red;
+}
+
+.green-hilight {
+    font-size: larger;
+    font-weight: bolder;
+    color: green;
 }
 
 @media only screen and (max-width: 1400px) {
