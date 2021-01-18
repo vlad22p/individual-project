@@ -7,7 +7,7 @@ export class GameScreen extends React.Component {
     render() {
         if (this.props.selectedGame === null) {
             return (
-                <div className="gameScreenContainer">
+                <div className="game-screen-container">
                     <h1>Choose a game!</h1>
                 </div>
             )
@@ -17,7 +17,7 @@ export class GameScreen extends React.Component {
             )
         } else if (this.props.selectedGame === "rockPaperScissors") {
             return (
-                <div className="gameScreenContainer">
+                <div className="game-screen-container">
                     <RockPaperScissors></RockPaperScissors>
                 </div>
             )

@@ -73,21 +73,21 @@ export class Hangman extends React.Component {
         );
         if (this.state.gameOver === null) {
             return (
-                <div className="gameContainer">
+                <div className="game-container">
                     <div className="hangman-container">
-                        <img className="hangmanImage" src={hangmanImages[this.state.imageIndex]}></img>
+                        <img className="hangman-image" src={hangmanImages[this.state.imageIndex]}></img>
                         <p>Guess the web-development related word</p>
                         <p className="green-hilight">{this.renderWord()}</p>
                         <p>You have made
                         <span className="red-hilight">{this.state.mistakesMade}/{this.state.maximumMistakes}</span>
                          mistakes.</p>
-                        <div className="hangmanKeyboard">{keyboard}</div>
+                        <div className="hangman-keyboard">{keyboard}</div>
                     </div>
                 </div>
             )
         } else if (this.state.gameOver === "lost") {
             return (
-                <div className="gameContainer">
+                <div className="game-container">
                     <div className="hangman-container">
                         <img src={hangman7}></img>
                         <p>You have lost the game.</p>

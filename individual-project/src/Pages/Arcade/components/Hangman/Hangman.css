@@ -1,4 +1,4 @@
-.gameContainer {
+.game-container {
     width: 35%;
     height: 80%;
     background-color: white;
@@ -15,11 +15,11 @@
     align-items: center;
 }
 
-.hangmanImage {
+.hangman-image {
     width: 60%;
 }
 
-.hangmanKeyboard {
+.hangman-keyboard {
     width: 100%;
     display: flex;
     justify-content: center;

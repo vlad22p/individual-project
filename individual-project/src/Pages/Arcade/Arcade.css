@@ -1,4 +1,4 @@
-#arcadeMainContainer {
+#arcade-main-container {
     width: 100%;
     height: 85vh;
     display: flex;
@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-#gameSelector {
+#game-selector {
     width: 15%;
     height: 80%;
     display: flex;
@@ -17,7 +17,7 @@
     box-shadow: -5px 0px 15px 5px #000000;
 }
 
-.selectGame {
+.select-game {
     width: 100%;
     height: 10%;
     display: flex;
@@ -26,14 +26,14 @@
     border-bottom: solid 2px black;
 }
 
-.selectGame:hover {
+.select-game:hover {
     color: #003487;
     background-color: #78acff;
     cursor: pointer;
 }
 
 @media only screen and (max-width: 1400px) {
-    #gameSelector {
+    #game-selector {
         width: 30%;
         height: 100%;
     }   

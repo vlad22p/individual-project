@@ -20,10 +20,10 @@ export class Arcade extends React.Component {
 
     render() {
         return (
-            <div id="arcadeMainContainer">
-                <div id="gameSelector">
-                    <div className="selectGame" onClick={this.selectHangman}>Hangman</div>
-                    <div className="selectGame" onClick={this.selectRockPaperScissors}>Rock Paper Scissors</div>
+            <div id="arcade-main-container">
+                <div id="game-selector">
+                    <div className="select-game" onClick={this.selectHangman}>Hangman</div>
+                    <div className="select-game" onClick={this.selectRockPaperScissors}>Rock Paper Scissors</div>
                 </div>
                 <GameScreen selectedGame={this.state.selectedGame}></GameScreen>
             </div>
